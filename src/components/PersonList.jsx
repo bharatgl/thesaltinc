@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PersonList = () => {
   const users = useSelector((state) => state.users);
@@ -28,10 +28,10 @@ const PersonList = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <button>edit</button>
+                <Link to={`/edit/${user.id}`}>edit</Link>
               </td>
               <td>
-                <button>Delete</button>
+                <Link>Delete</Link>
               </td>
             </tr>
           ))}
