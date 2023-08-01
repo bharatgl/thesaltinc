@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PersonHome = () => {
+
+
+  
   return (
     <div>
       <h1>Welcome to Person Management app</h1>

@@ -1,27 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { userList } from "../../components/data";
 
+const initialState = {
+  userList: JSON.parse(localStorage.getItem('users')) || []
+}
+
+
 const userSlice = createSlice({
   name: "users",
-  initialState: userList,
+  initialState,
   reducers: {
-    addUser: (state, action) => {
-      state.push(action.payload);
+
+    addUser: (state, { payload }) => {
+      console.log(payload)
+      const newUserList = [...state.userList, payload]
+      localStorage.setItem("users", JSON.stringify(newUserList))
+      state.userList = newUserList;
     },
     updateUser: (state, action) => {
       const { id, name, email } = action.payload;
-      const updatingUser = state.find((user) => user.id == id);
-      if (updatingUser) {
-        updatingUser.name = name;
-        updatingUser.email = email;
-      }
+
+      const filteredUsers = state.userList.filter((user) => user.id !== id)
+
+      state.userList = [...filteredUsers, { id, name, email }]
+
+
     },
-    deleteUser: (state, action) => {
-      const { id } = action.payload;
-      const deletingUser = state.find((user) => user.id == id);
-      if (deletingUser) {
-        return state.filter((f) => f.id !== id);
-      }
+    deleteUser: (state, { payload }) => {
+
+      state.userList = state.userList.filter(({ id }) => id !== payload);
+      localStorage.setItem("users", JSON.stringify(state.userList))
+
     },
   },
 });

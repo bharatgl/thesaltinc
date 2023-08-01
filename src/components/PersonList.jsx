@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteUser } from "../Redux/features/UserReducer";
 
 const PersonList = () => {
-  const users = useSelector((state) => state.users);
+  const { userList } = useSelector((state) => state.users);
+
+
 
   const dispatch = useDispatch();
   const handleDelete = (id) => {
-    dispatch(deleteUser({ id: id }));
+    dispatch(deleteUser(id));
   };
-  console.log(users);
+
+
 
   return (
     <div className="container">
@@ -28,9 +31,9 @@ const PersonList = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
+          {userList.map((user, index) => (
             <tr key={index}>
-              <td>{user.id}</td>
+              <td>{index + 1}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>

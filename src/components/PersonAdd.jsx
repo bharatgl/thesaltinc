@@ -3,20 +3,18 @@ import { addUser } from "../Redux/features/UserReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { v4 as uuid } from "uuid"
 const PersonAdd = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const users = useSelector((state) => state.users);
+  const { userList } = useSelector((state) => state.users);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(
-      addUser({ id: users[users.length - 1].id + 1, name: name, email: email })
-    );
+    dispatch(addUser({ name, email, id: uuid() }));
     navigate("/person-list");
   };
 

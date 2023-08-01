@@ -5,8 +5,8 @@ import { updateUser } from "../Redux/features/UserReducer";
 
 const PersonUpdate = () => {
   const { id } = useParams();
-  const users = useSelector((state) => state.users);
-  const existingUser = users.filter((f) => f.id == id);
+  const { userList } = useSelector((state) => state.users);
+  const existingUser = userList.filter((f) => f.id == id);
 
   const { name, email } = existingUser[0];
   const [uname, setName] = useState(name);
@@ -18,7 +18,7 @@ const PersonUpdate = () => {
     event.preventDefault();
     dispath(
       updateUser({
-        id: id,
+        id,
         name: uname,
         email: uemail,
       })
