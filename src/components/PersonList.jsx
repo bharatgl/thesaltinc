@@ -1,9 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { deleteUser } from "../Redux/features/UserReducer";
 
 const PersonList = () => {
   const users = useSelector((state) => state.users);
+
+  const dispatch = useDispatch();
+  const handleDelete = (id) => {
+    dispatch(deleteUser({ id: id }));
+  };
   console.log(users);
 
   return (
@@ -31,7 +37,7 @@ const PersonList = () => {
                 <Link to={`/edit/${user.id}`}>edit</Link>
               </td>
               <td>
-                <Link>Delete</Link>
+                <button onClick={() => handleDelete(user.id)}>Delete</button>
               </td>
             </tr>
           ))}
