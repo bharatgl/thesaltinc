@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url(assets/images/background.jpg) center/cover;
+  align-items: center;
+}
+
+table,
+th,
+td {
+  padding: 1rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #dad4ecfe;
+}
+
+main.table {
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem rgba(172, 127, 127, 0.333);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: 0.8rem 1rem;
+
+  text-align: center;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% -1.6rem);
+  background-color: #fffb;
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+  overflow: auto;
+}
+
+.table__body::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.table__body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+.table__body:hover::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: visible;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr:hover {
+  background-color: #fff6;
+}
+
+.edit {
+  background-color: #72aee6c9;
+  padding: 5px 30px;
+  border-radius: 2rem;
+  color: #000080;
+  text-decoration: none;
+  text-align: center;
+}
+
+.delete {
+  background-color: #d893a3;
+  padding: 5px 30px;
+  border-radius: 2rem;
+  color: #b30021;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+    min-width: 12.1rem;
+  }
+}
+
+.outer {
+  margin: 10px 10px 0px 10px;
+
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+.button {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  border: none;
+}
+.create__button {
+  margin-left: 2px;
+  background-color: #111;
+  height: 38px;
+  width: 146px;
+  border-radius: 50px;
+}
+.create__link {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  padding-top: 10px;
+}
