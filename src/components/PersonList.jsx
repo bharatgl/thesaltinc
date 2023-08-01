@@ -1,14 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PersonList = () => {
   const users = useSelector((state) => state.users);
   console.log(users);
+
   return (
     <div className="container">
       <h2>Person List</h2>
-      <Link to="/person-add" className="button">Create +</Link>
+      <Link to="/person-add" className="button">
+        Create +
+      </Link>
       <table>
         <thead>
           <tr>
