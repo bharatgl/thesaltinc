@@ -30,7 +30,7 @@ const PersonAdd = () => {
             type="text"
             name="name"
             className="form-control"
-            placeholder="enter name"
+            placeholder="Enter Your Name"
             onChange={(e) => setName(e.target.value)}
             id="username"
           />
@@ -42,7 +42,7 @@ const PersonAdd = () => {
             type="text"
             name="email"
             className="form-control"
-            placeholder="enter email"
+            placeholder="Enter Your Email"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>

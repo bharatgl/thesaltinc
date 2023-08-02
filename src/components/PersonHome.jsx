@@ -11,7 +11,7 @@ const PersonHome = () => {
           <button className="outer button">
             <div className="create__button">
               <Link to="/person-list" className="create__link">
-                PersonList
+                Person List
               </Link>
             </div>
           </button>

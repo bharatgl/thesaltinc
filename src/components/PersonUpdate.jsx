@@ -38,7 +38,7 @@ const PersonUpdate = () => {
             type="text"
             name="name"
             className="form-control"
-            placeholder="enter name"
+            placeholder="Update Your Name"
             defaultValue={uname}
             onChange={(e) => setName(e.target.value)}
           />
@@ -49,7 +49,7 @@ const PersonUpdate = () => {
             type="text"
             name="email"
             className="form-control"
-            placeholder="enter email"
+            placeholder="Update Your Email"
             defaultValue={uemail}
             onChange={(e) => setEmail(e.target.value)}
           />
