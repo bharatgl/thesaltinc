@@ -1,12 +1,16 @@
-import React from "react";
+import React  from "react";
+import { useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three/src/loaders/TextureLoader";
+import texture from "../assets/images/earth.jpg";
 
-const Box = () => {
+function Box() {
+  const colorMap = useLoader(TextureLoader, texture);
   return (
-    <mesh>
-      {/* <boxBufferGeometry attach="geometry" />
-      <meshLambertMaterial attach ="material" color="blue"/> */}
+    <mesh rotation={[10, 1200, 600]}>
+      <sphereGeometry attach="geometry" args={[3, 64, 64]} />
+      <meshStandardMaterial map={colorMap} />
     </mesh>
   );
-};
+}
 
 export default Box;
