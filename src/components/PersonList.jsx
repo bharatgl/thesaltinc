@@ -25,7 +25,7 @@ const PersonList = () => {
       </button>
       <button className="outer button">
         <div className="create__button">
-          <Link to="/person_add" className="create__link">
+          <Link to="/person-add" className="create__link">
             Create +
           </Link>
         </div>

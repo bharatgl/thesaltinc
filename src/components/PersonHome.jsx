@@ -10,7 +10,7 @@ const PersonHome = () => {
         <div className="home__button">
           <button className="outer button">
             <div className="create__button">
-              <Link to="/person_list" className="create__link">
+              <Link to="/person-list" className="create__link">
                 Person List
               </Link>
             </div>

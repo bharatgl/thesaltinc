@@ -15,7 +15,7 @@ const PersonAdd = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addUser({ name, email, id: uuid() }));
-    navigate("/person_list");
+    navigate("/person-list");
   };
 
   return (
@@ -59,7 +59,7 @@ const PersonAdd = () => {
               </Link>
             </div>
           </button>
-          <button className="outer button"  type="submit" >
+          <button className="outer button" type="submit">
             <div className="create__button">
               <div className="create__link">Submit</div>
             </div>

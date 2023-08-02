@@ -23,7 +23,7 @@ const PersonUpdate = () => {
         email: uemail,
       })
     );
-    navigate("/person_list");
+    navigate("/person-list");
   };
 
   return (
@@ -66,7 +66,7 @@ const PersonUpdate = () => {
               </Link>
             </div>
           </button>
-          <button className="outer button" type="submit" >
+          <button className="outer button" type="submit">
             <div className="create__button">
               <div className="create__link">Update</div>
             </div>
