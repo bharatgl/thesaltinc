@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  position: relative;
-  ${"" /* background: #1f1144; */}
-  canvas {
-    width: 800px;
-    height: 800px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  ${"" /* background: #1f1144; */} canvas {
+    width: 700px;
+    height: 700px;
   }
 `;
 
