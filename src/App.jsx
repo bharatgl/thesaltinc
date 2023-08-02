@@ -6,10 +6,13 @@ import PersonHome from "./components/PersonHome";
 import PersonAdd from "./components/PersonAdd";
 import PersonUpdate from "./components/PersonUpdate";
 import { Canvas } from "@react-three/fiber";
-import Box from "./components/Box";
 import Wrapper from "./components/Wrapper";
 import { OrbitControls } from "@react-three/drei";
 import Stars from "./components/Stars";
+import Earth from "./components/Earth";
+import Moon from "./components/Moon";
+
+import MoonWrapper from "./components/MoonWrapper";
 const App = () => {
   return (
     <>
@@ -27,10 +30,24 @@ const App = () => {
           <directionalLight position={[8, 10, 20]} intensity={1} />
           <OrbitControls enableZoom={false} />
           <Suspense fallback={null}>
-            <Box />
+            <Earth />
           </Suspense>
         </Canvas>
+
+       
       </Wrapper>
+
+      <MoonWrapper>
+        <Stars />
+        <Canvas className="canvas__moon">
+          <ambientLight intensity={1.5} />
+          <directionalLight position={[8, 10, 20]} intensity={1} />
+          <OrbitControls enableZoom={false} />
+          <Suspense fallback={null}>
+            <Moon />
+          </Suspense>
+        </Canvas>
+      </MoonWrapper>
     </>
   );
 };
