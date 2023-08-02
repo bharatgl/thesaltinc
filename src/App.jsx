@@ -10,14 +10,14 @@ import Box from "./components/Box";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+
         <Routes>
           <Route path="/" element={<PersonHome />} />
           <Route path="/person-list" element={<PersonList />} />
           <Route path="/person-add" element={<PersonAdd />} />
           <Route path="/edit/:id" element={<PersonUpdate />} />
         </Routes>
-      </BrowserRouter>
+
     </>
   );
 };
