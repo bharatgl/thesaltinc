@@ -23,7 +23,7 @@ const PersonUpdate = () => {
         email: uemail,
       })
     );
-    navigate("/person-list");
+    navigate("/person_list");
   };
 
   return (

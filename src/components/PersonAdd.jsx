@@ -15,7 +15,7 @@ const PersonAdd = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addUser({ name, email, id: uuid() }));
-    navigate("/person-list");
+    navigate("/person_list");
   };
 
   return (
