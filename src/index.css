@@ -147,6 +147,8 @@ form {
   background-color: rgba(255, 255, 255, 0.07);
   position: absolute;
   transform: translate(-50%, -50%);
+  max-height: calc(89% -1.6rem);
+  margin: 0.8rem auto;
   top: 50%;
   left: 50%;
   border-radius: 10px;
@@ -156,6 +158,17 @@ form {
   padding: 50px 35px;
 }
 
+@media only screen and (max-width: 600px) {
+  form {
+    /* Adjust the styles for smaller screens here */
+    width: 100%; /* Make the form full width */
+    max-width: 400px; /* Limit the form's maximum width */
+    max-height: calc(100% - 1.6rem); /* Limit the form's maximum height */
+    padding: 30px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Adjust font size for better readability */
+    margin: 20px; /* Add margin to create some spacing around the form */
+  }
+}
 form * {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
