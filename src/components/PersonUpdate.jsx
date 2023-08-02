@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { updateUser } from "../Redux/features/UserReducer";
 
 const PersonUpdate = () => {
@@ -27,36 +27,50 @@ const PersonUpdate = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="form-inner-container">
+    <div className="form__background">
+      <form onSubmit={handleUpdate}>
         <h3>Update User</h3>
-        <form onSubmit={handleUpdate}>
-          <div className="">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              className="form-control"
-              placeholder="enter name"
-              defaultValue={uname}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="text"
-              name="email"
-              className="form-control"
-              placeholder="enter email"
-              defaultValue={uemail}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <br />
-          <button>Update</button>
-        </form>
-      </div>
+        <div className="">
+          <label htmlFor="name" className="username">
+            Name{" "}
+          </label>
+          <input
+            type="text"
+            name="name"
+            className="form-control"
+            placeholder="enter name"
+            defaultValue={uname}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email </label>
+          <input
+            type="text"
+            name="email"
+            className="form-control"
+            placeholder="enter email"
+            defaultValue={uemail}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        {/* <button className="submit__button"> Update</button> */}
+        <div className="form__buttons">
+          <button className="outer button">
+            <div className="create__button">
+              <Link to="/" className="create__link">
+                Home
+              </Link>
+            </div>
+          </button>
+          <button className="outer button">
+            <div className="create__button">
+              <div className="create__link">Update</div>
+            </div>
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

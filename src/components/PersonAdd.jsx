@@ -2,8 +2,8 @@ import React from "react";
 import { addUser } from "../Redux/features/UserReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { v4 as uuid } from "uuid"
+import { Link, useNavigate } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 const PersonAdd = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,34 +19,51 @@ const PersonAdd = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="form-inner-container">
+    <div className="form__background">
+      <form onSubmit={handleSubmit}>
         <h3>Add New Person</h3>
-        <form onSubmit={handleSubmit}>
-          <div className="">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              className="form-control"
-              placeholder="enter name"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="text"
-              name="email"
-              className="form-control"
-              placeholder="enter email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <br />
-          <button>Submit</button>
-        </form>
-      </div>
+        <div>
+          <label htmlFor="name" className="username">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            className="form-control"
+            placeholder="enter name"
+            onChange={(e) => setName(e.target.value)}
+            id="username"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            className="form-control"
+            placeholder="enter email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        {/* <button className="submit__button">Submit</button> */}
+
+        <div className="form__buttons">
+          <button className="outer button">
+            <div className="create__button">
+              <Link to="/" className="create__link">
+                Home
+              </Link>
+            </div>
+          </button>
+          <button className="outer button">
+            <div className="create__button">
+              <div className="create__link">Submit</div>
+            </div>
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

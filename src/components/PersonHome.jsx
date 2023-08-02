@@ -3,20 +3,21 @@ import { Link } from "react-router-dom";
 
 const PersonHome = () => {
   return (
-    <div>
-      <h1>Welcome to Person Management app</h1>
+    <>
+      <form>
+        <h1>Welcome to Person Management App</h1>
 
-      <button className="outer button">
-        <div className="create__button">
-          <Link to="/person-list" className="create__link">
-            Redirect to Person List
-          </Link>
+        <div className="home__button">
+          <button className="outer button">
+            <div className="create__button">
+              <Link to="/person-list" className="create__link">
+                PersonList
+              </Link>
+            </div>
+          </button>
         </div>
-      </button>
-      {/* <Link to="/person-list">
-        <button>Redirect to Person List</button>
-      </Link> */}
-    </div>
+      </form>
+    </>
   );
 };
 
