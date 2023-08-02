@@ -33,6 +33,7 @@ const PersonAdd = () => {
             placeholder="Enter Your Name"
             onChange={(e) => setName(e.target.value)}
             id="username"
+            required
           />
         </div>
         <div>
@@ -44,6 +45,7 @@ const PersonAdd = () => {
             className="form-control"
             placeholder="Enter Your Email"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -57,7 +59,7 @@ const PersonAdd = () => {
               </Link>
             </div>
           </button>
-          <button className="outer button">
+          <button className="outer button"  type="submit" >
             <div className="create__button">
               <div className="create__link">Submit</div>
             </div>
