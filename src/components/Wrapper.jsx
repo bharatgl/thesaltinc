@@ -1,25 +1,17 @@
 import styled from "styled-components";
+import "../App.css";
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 0;
+  top: 10%;
+  left:10%;
   z-index: -1;
-  left: 0;
+
   ${"" /* background: #1f1144; */} canvas {
-    width: 700px;
-    height: 700px;
+    width:100%;
+    height: 100%;
   }
 `;
 
-const Star = () => {
-  return (
-    <>
-      <div id="star"></div>
-      <div id="star1"></div>
-      <div id="star2"></div>
-      <div id="star3"></div>
-    </>
-  );
-};
 
 export default Wrapper;
