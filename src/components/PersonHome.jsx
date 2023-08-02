@@ -7,6 +7,13 @@ const PersonHome = () => {
       <form>
         <h1>Welcome to Person Management App</h1>
 
+        <div className="typing-wrapper">
+          <div className="typing-demo">
+            Hi! I am Bharat, I have developed this using React, Threejs, React
+            fibre, Redux to test this app click on the button 👇🏻
+          </div>
+        </div>
+
         <div className="home__button">
           <button className="outer button">
             <div className="create__button">

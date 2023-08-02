@@ -214,7 +214,7 @@ input {
   margin-top: 60px;
 }
 .home__button {
-  margin-top: 300px;
+  margin-top: 40px;
   margin-left: 80px;
 }
 
@@ -256,4 +256,36 @@ input {
   letter-spacing: 1px;
 
   padding-top: 10px;
+}
+
+.typing-wrapper {
+  /* height: 100vh; */
+  margin-top: 50px;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+.typing-demo {
+  width: 22ch;
+  height: 8em; /* Set a fixed height for equal lines, adjust as needed */
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  /* Remove white-space: nowrap; */
+  overflow: hidden;
+  word-wrap: break-word;
+  border-right: 3px solid;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
