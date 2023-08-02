@@ -29,3 +29,41 @@ The "Person-home" page is enriched with an animated background using CSS or the 
 ### Responsive Design:
 
 Both the form in "Person-add" and the table in "Person-list" are designed to be responsive, ensuring optimal usability on various devices, including desktops, tablets, and mobile phones.
+
+# Installation and Usage
+
+## Follow the steps below to set up and run the application locally:
+
+### Prerequisites
+
+1. Before proceeding, make sure you have the following installed on your machine:
+
+2. Node.js (https://nodejs.org)
+   npm (Node Package Manager, comes with Node.js)
+3. Clone the Repository
+   Start by cloning this repository to your local machine using the following command:
+
+4. git clone https://github.com/your-username/person-management-system.git
+   Install Dependencies
+   Navigate to the project directory and install the necessary dependencies using npm:
+
+5. cd person-management-system
+   npm install
+   Development Server
+   To run the development server and see the application in action, use the following command:
+
+6. npm run dev
+   This will start the Vite development server, which automatically reloads the page whenever you make changes to the code.
+
+7. Build for Production
+   If you want to build the application for production, you can use the following command:
+
+8. npm run build
+   This will create an optimized production build in the dist directory.
+
+9. Running the Production Build
+   To serve the production build locally, you can use the following command:
+
+10. npm run serve
+
+#### This will start a server to serve the production build.
