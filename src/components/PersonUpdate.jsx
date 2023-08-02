@@ -41,6 +41,7 @@ const PersonUpdate = () => {
             placeholder="Update Your Name"
             defaultValue={uname}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div>
@@ -52,6 +53,7 @@ const PersonUpdate = () => {
             placeholder="Update Your Email"
             defaultValue={uemail}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -64,7 +66,7 @@ const PersonUpdate = () => {
               </Link>
             </div>
           </button>
-          <button className="outer button">
+          <button className="outer button" type="submit" >
             <div className="create__button">
               <div className="create__link">Update</div>
             </div>
